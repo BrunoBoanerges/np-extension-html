@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Now Playing Youtube",
+  "version": "1.0.0",
+  "description": "Identify current video playing on youtube",
+  "icons": {
+    "48": "icons/48.webp"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*"
+      ],
+      "js": [
+        "np.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "http://localhost/*",
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "np-bg.js"
+    ]
+  }
+}
